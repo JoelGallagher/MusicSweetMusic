@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MusicSweetMusic.Entities;
+using MusicSweetMusic.Songs;
+using System;
 
 namespace MusicSweetMusic
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            var player = new Player();
+            var sweetChildOMine = SweetChildOMine.GetSong();
+
+            player.Play(sweetChildOMine);
+
+            Console.ReadKey();
         }
     }
 }
